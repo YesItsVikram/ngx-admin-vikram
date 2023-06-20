@@ -53,7 +53,7 @@ import { ActivatedRoute, Params } from "@angular/router";
                     row["col" + (+heading[0].substring(3) + 1)] || ""
                   }}
                   <div
-                    *ngIf="j === jsonArr22.length - 1 && i === 0"
+                    *ngIf="j === 6 && i === 0"
                     style="display: flex; width: 100%; justify-content: center"
                   >
                     <button class="btn success">Approve</button>

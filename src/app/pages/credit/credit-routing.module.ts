@@ -4,6 +4,7 @@ import { CreditComponent } from "./credit.component";
 import { AccordionComponent } from "./accordion/accordion.component";
 import { TriggerComponent } from "./trigger/trigger.component";
 import { LenderComponent } from "./lender/lender.component";
+import { CompletedComponent } from "./completed/completed.component";
 // import { AccordionComponent } from "../layout/accordion.component";
 // import { Tab1Component } from "../tabs/tabs.component";
 
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: "lender",
         component: LenderComponent,
+      },
+      {
+        path: "complete",
+        component: CompletedComponent,
       },
       {
         path: "",

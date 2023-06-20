@@ -30,6 +30,10 @@ export class CreditComponent implements OnInit {
       // link: "/pages/layout/tabs",
       route: "/pages/credit/lender",
     },
+    {
+      title: "Complete Leads",
+      route: "/pages/credit/complete",
+    },
   ];
 
   constructor(private route: ActivatedRoute, private router: Router) {}

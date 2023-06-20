@@ -9,6 +9,7 @@ import { PagesRoutingModule } from "./pages-routing.module";
 import { MiscellaneousModule } from "./miscellaneous/miscellaneous.module";
 import { TriggerComponent } from "./credit/trigger/trigger.component";
 import { LenderComponent } from "./credit/lender/lender.component";
+import { CompletedComponent } from "./credit/completed/completed.component";
 // import { CreditModule } from "./credit/credit.module";
 // import { CreditComponent } from "./credit/credit.component";
 
@@ -23,6 +24,11 @@ import { LenderComponent } from "./credit/lender/lender.component";
     NbTabsetModule,
     // CreditModule,
   ],
-  declarations: [PagesComponent, TriggerComponent, LenderComponent],
+  declarations: [
+    PagesComponent,
+    TriggerComponent,
+    LenderComponent,
+    CompletedComponent,
+  ],
 })
 export class PagesModule {}

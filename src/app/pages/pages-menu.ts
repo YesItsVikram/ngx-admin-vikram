@@ -49,6 +49,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       //   link: "/pages/layout/tabs",
       //   queryParams: { tabs: "Utility 1,Utility 2, Utility 3" },
       // },
+      {
+        title: "Complete Leads",
+        link: "/pages/credit/complete",
+      },
     ],
   },
   {
@@ -88,10 +92,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: "Campaign Portal",
-        link: "/pages/layout/tabs",
-      },
-      {
-        title: "Complete Leads",
         link: "/pages/layout/tabs",
       },
     ],
