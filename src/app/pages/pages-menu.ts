@@ -90,6 +90,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: "Campaign Portal",
         link: "/pages/layout/tabs",
       },
+      {
+        title: "Complete Leads",
+        link: "/pages/layout/tabs",
+      },
     ],
   },
   {
@@ -100,10 +104,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: "All Leads",
         link: "/pages/layout/tabs",
       },
-      {
-        title: "Complete Leads",
-        link: "/pages/layout/tabs",
-      },
+
       {
         title: "Affiliates",
         link: "/pages/layout/tabs",

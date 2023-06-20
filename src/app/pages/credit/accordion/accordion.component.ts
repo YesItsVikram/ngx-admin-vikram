@@ -15,8 +15,28 @@ import { ActivatedRoute, Params } from "@angular/router";
       <table>
         <thead>
           <tr>
-            <th *ngFor="let heading of headings22" [attr.colspan]="2">
+            <th *ngFor="let heading of headings22" [attr.colspan]="2" st>
               {{ heading[1] }}
+              <div
+                class="display: flex; justify-content: center"
+                *ngIf="heading[1] === 'LK Engine Data'"
+              >
+                <button
+                  *ngIf="!showLKData"
+                  class="smbtn success"
+                  (click)="updateLK()"
+                >
+                  Show
+                </button>
+
+                <button
+                  *ngIf="showLKData"
+                  class="smbtn danger"
+                  (click)="updateLK()"
+                >
+                  Hide
+                </button>
+              </div>
             </th>
           </tr>
         </thead>
@@ -24,7 +44,10 @@ import { ActivatedRoute, Params } from "@angular/router";
           <tr *ngFor="let row of jsonArr22; let j = index">
             <td *ngFor="let heading of headings22; let i = index" colspan="2">
               <div class="outer">
-                <div class="inner">
+                <div
+                  [class.lk]="heading[1] === 'LK Engine Data' && !showLKData"
+                  class="inner"
+                >
                   <b>{{ row[heading[0]] ? row[heading[0]] + " : " : "" }}</b>
                   &nbsp;&nbsp;{{
                     row["col" + (+heading[0].substring(3) + 1)] || ""
@@ -109,6 +132,8 @@ export class AccordionComponent {
   headings22 = [];
   tabs: string[] = [];
 
+  showLKData = false;
+
   constructor(private route: ActivatedRoute) {
     this.headings = Object.keys(this.jsonArr1[0]).filter(
       (d) => !d.startsWith("Column")
@@ -145,6 +170,11 @@ export class AccordionComponent {
     if (i % 2 === 0) return i * 2;
 
     return i * 2 - 1;
+  }
+
+  updateLK() {
+    this.showLKData = !this.showLKData;
+    console.log(this.showLKData);
   }
 
   ngOnInit() {
