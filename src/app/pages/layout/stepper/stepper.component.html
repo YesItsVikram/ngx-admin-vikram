@@ -1,143 +1,291 @@
-<nb-card class="col-md-12 col-lg-12 col-xxxl-12">
-  <nb-card-body>
-    <nb-stepper orientation="horizontal">
-      <nb-step [label]="labelOne">
-        <ng-template #labelOne>First step</ng-template>
-        <h3>Step content #1</h3>
-        <button nbButton disabled nbStepperNext>prev</button>
-        <button nbButton nbStepperNext>next</button>
-      </nb-step>
-      <nb-step [label]="labelTwo">
-        <ng-template #labelTwo>Second step</ng-template>
-        <h3>Step content #2</h3>
-        <button nbButton nbStepperPrevious>prev</button>
-        <button nbButton nbStepperNext>next</button>
-      </nb-step>
-      <nb-step label="Third step">
-        <h3>Step content #3</h3>
-        <button nbButton nbStepperPrevious>prev</button>
-        <button nbButton nbStepperNext>next</button>
-      </nb-step>
-      <nb-step [label]="labelFour">
-        <ng-template #labelFour>Fourth step</ng-template>
-        <h3>Step content #4</h3>
-        <button nbButton nbStepperPrevious>prev</button>
-        <button nbButton disabled nbStepperNext>next</button>
-      </nb-step>
-    </nb-stepper>
-  </nb-card-body>
-</nb-card>
-
-<div class="steppers-container row">
-  <div class="col-md-12 col-lg-6 col-xxxl-6">
-    <nb-card>
-      <nb-card-body>
-        <nb-stepper #stepper>
-          <nb-step [stepControl]="firstForm" label="First step">
-            <form [formGroup]="firstForm" (ngSubmit)="onFirstSubmit()" class="step-container">
-              <p class="lorem">
-                Lorizzle ipsum dolizzle stuff fizzle, consectetuer adipiscing break it down. Nullizzle sapien velizzle,
-                my shizz pimpin', shizzle my nizzle crocodizzle shut the shizzle up, gravida vizzle, dang.
-              </p>
-              <div class="input-group">
-                <input type="text" placeholder="Enter your name" class="form-control" formControlName="firstCtrl"
-                       [ngClass]="{'form-control-danger': firstForm.invalid && (firstForm.dirty || firstForm.touched)}">
+<section class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Complete leads</h3>
+          </div>
+          <!-- /.card-header -->
+          <div class="card-body" style="overflow:auto">
+            <table id="example1" class="table table-bordered table-striped">
+              <thead>
+                <tr>
+                  <th>Social Data</th>
+                  <th>Customer Journey</th>
+                  <th>Bank Data</th>
+                  <th>KYC Data</th>
+                  <th>Aadhar Data</th>
+                  <th>Employment Data</th>
+                  <th>Loan Data</th>
+                  <th>Attribution Data</th>
+                  <th>CIBIL/ CRIF</th>
+                  <th>Customer Documents</th>
+                  <th>Fraud Score</th>
+                  <th>Manual Check Rejection</th>
+                  <th>Rejection Reason</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="hideextra">
+                      <b>Loan Id</b>: 9680670<br/>
+                      <b>Customer Id</b>: 6566548<br/> 
+                      <b>Journey Type</b>: New Journey<br/> 
+                      <b>Social First Name</b>: Rajeev<br/> 
+                      <b>Social Last Name</b>: Suresh<br/>
+                      <b>Social Email</b>: raj.sure@work.com<br/> 
+                      <b>First Name</b>: Raj<br/> 
+                      <b>Last Name</b>: Sure<br/> 
+                      <b>Social Platform</b>: Google<br/> 
+                      <b>Profile Link</b>: <a href="#">Google</a><br/> 
+                      <b>Source</b>: Associate/justloanguru.com<br/>
+                      <b>Preferred Language</b>: <br/> 
+                      <b>Gender</b>: Male<br/> 
+                      <button type="button" class="btn btn-block bg-gradient-warning">Update Current address</button><br/> 
+                      <button type="button" class="btn btn-block bg-gradient-warning">Update Permanent address</button>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Stage</b>: initial_pre_approved<br/>
+                      <b>Dropout</b>: Approved-Loan-Amount-Less<br/>
+                      <b>Reason Reject Reason</b>: - <br/>
+                      <b>Customer State</b>: loan_application_pre_approved<br/>
+                      <b>Loan Status</b>: Post Sanction Dropout<br/>
+                      <b>Trigger Log</b>: initial_post_sanction_dropout
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Account holder name</b>: Rajeev Suresh<br/>	
+                      <b>Bank Account Number</b>: 123456789<br/> 
+                      <b>Bank IFSC</b>: SBIN0011128 <br/>
+                      <b>Bank Name</b>: State Bank of India<br/>	
+                      <b>Bank Code</b>: SBIN<br/>
+                      <b>Bank Branch</b>: RANJANGAON<br/>
+                      <b>Bank City</b>: Pune<br/>
+                      <b>Bank District</b>: Pune<br/>
+                      <b>Bank State</b>: Maharashtra<br/>
+                      <b>Bank Type</b>: Savings Account<br/>
+                      <b>Bank City Code</b>: 12713<br/>
+                      <b>Bank Branch Code</b>: 4066<br/>
+                      <b>Bank MICR Code</b>: 411002150<br/>
+                      <b>Bank NEFT Code</b>: SBIN0004066<br/>
+                      <b>Bank RTGS Code</b>: SBIN00112713<br/>
+                      <b>Account Type</b>: Saving Account<br/>
+                      <b>Statement Period</b>: 180<br/>
+                      <b>Account Balance</b>: 150000<br/>
+                      <b>Account Number</b>: 123456789<br/>
+                      <b>Branch Name</b>: State Bank of India<br/>
+                      <b>Card Type</b>: Credit Card<br/>
+                      <b>Card Number</b>: XXXX XXXX XXXX 1234<br/>
+                      <b>Card Expiry</b>: 12/24<br/>
+                      <b>Card Holder Name</b>: Rajeev Suresh<br/>
+                      <b>Card Limit</b>: 100000<br/>
+                      <b>Card Balance</b>: 5000<br/>
+                      <b>Card Utilization</b>: 5%
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Aadhar Number</b>: 1234 5678 9012<br/>
+                      <b>PAN Number</b>: ABCDE1234F<br/>
+                      <b>PAN Verified</b>: Yes<br/>
+                      <b>Aadhar Verified</b>: Yes<br/>
+                      <b>DOB</b>: 01/01/1980<br/>
+                      <b>Gender</b>: Male<br/>
+                      <b>Address Line 1</b>: 123, ABC Colony<br/>
+                      <b>Address Line 2</b>: XYZ Street<br/>
+                      <b>City</b>: Pune<br/>
+                      <b>State</b>: Maharashtra<br/>
+                      <b>Pincode</b>: 411001<br/>
+                      <b>Phone Number</b>: 9876543210<br/>
+                      <b>Email</b>: raj.sure@work.com<br/>
+                      <b>Marital Status</b>: Single<br/>
+                      <b>Spouse Name</b>: -<br/>
+                      <b>Dependents</b>: 0<br/>
+                      <b>Resident Type</b>: Own<br/>
+                      <b>Education</b>: Graduate<br/>
+                      <b>Income</b>: 50000<br/>
+                      <b>Employer Name</b>: ABC Ltd.<br/>
+                      <b>Employer Address</b>: 456, PQR Colony<br/>
+                      <b>Employer City</b>: Pune<br/>
+                      <b>Employer State</b>: Maharashtra<br/>
+                      <b>Employer Pincode</b>: 411002<br/>
+                      <b>Employer Phone</b>: 8765432109<br/>
+                      <b>Employer Email</b>: hr@abc.com<br/>
+                      <b>Employer Type</b>: Private<br/>
+                      <b>Employer Designation</b>: Manager<br/>
+                      <b>Employer Tenure</b>: 5 years<br/>
+                      <b>Work Experience</b>: 10 years<br/>
+                      <b>Business Type</b>: Service<br/>
+                      <b>Business Name</b>: -<br/>
+                      <b>Business Address</b>: -<br/>
+                      <b>Business City</b>: -<br/>
+                      <b>Business State</b>: -<br/>
+                      <b>Business Pincode</b>: -<br/>
+                      <b>Business Phone</b>: -<br/>
+                      <b>Business Email</b>: -<br/>
+                      <b>Business Tenure</b>: -<br/>
+                      <b>Loan Amount</b>: 100000<br/>
+                      <b>Loan Tenure</b>: 12 months<br/>
+                      <b>Loan Purpose</b>: Personal<br/>
+                      <b>Loan Interest Rate</b>: 10%<br/>
+                      <b>Loan EMI</b>: 8888<br/>
+                      <b>Loan Repayment Mode</b>: Auto-Debit<br/>
+                      <b>Loan Repayment Account</b>: 123456789<br/>
+                      <b>Loan Disbursal Date</b>: 01/01/2023<br/>
+                      <b>Loan Disbursal Account</b>: 123456789<br/>
+                      <b>Loan Prepayment</b>: Yes<br/>
+                      <b>Loan Foreclosure</b>: No<br/>
+                      <b>Foreclosure Charges</b>: -<br/>
+                      <b>Collection Efficiency</b>: 90%
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Aadhar Card</b>: <a href="#">View Document</a><br/>
+                      <b>PAN Card</b>: <a href="#">View Document</a><br/>
+                      <b>Salary Slip</b>: <a href="#">View Document</a><br/>
+                      <b>Bank Statement</b>: <a href="#">View Document</a><br/>
+                      <b>Address Proof</b>: <a href="#">View Document</a><br/>
+                      <b>Other Documents</b>: <a href="#">View Document</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Loan Amount</b>: 100000<br/>
+                      <b>Interest Rate</b>: 10%<br/>
+                      <b>Processing Fee</b>: 5000<br/>
+                      <b>Disbursal Amount</b>: 95000<br/>
+                      <b>EMI</b>: 8888<br/>
+                      <b>EMI Start Date</b>: 01/01/2023<br/>
+                      <b>EMI End Date</b>: 01/01/2024<br/>
+                      <b>Foreclosure</b>: No<br/>
+                      <b>Foreclosure Charges</b>: -<br/>
+                      <b>Principal Outstanding</b>: 75000<br/>
+                      <b>Interest Outstanding</b>: 5000<br/>
+                      <b>Total Outstanding</b>: 80000<br/>
+                      <b>Total Received</b>: 20000<br/>
+                      <b>Total Repaid</b>: 20000<br/>
+                      <b>Repayment Status</b>: On Track
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Lead Source</b>: Associate/justloanguru.com<br/>
+                      <b>Campaign</b>: Email/JustLoanGuru June<br/>
+                      <b>Medium</b>: Email<br/>
+                      <b>Keyword</b>: justloanguru<br/>
+                      <b>Content</b>: -<br/>
+                      <b>Referral Source</b>: -<br/>
+                      <b>UTM Campaign</b>: -<br/>
+                      <b>UTM Source</b>: -<br/>
+                      <b>UTM Medium</b>: -<br/>
+                      <b>UTM Term</b>: -<br/>
+                      <b>UTM Content</b>: -<br/>
+                      <b>Referrer</b>: -<br/>
+                      <b>IP Address</b>: 192.168.0.1<br/>
+                      <b>Device</b>: Desktop<br/>
+                      <b>Browser</b>: Chrome<br/>
+                      <b>Operating System</b>: Windows<br/>
+                      <b>City</b>: Pune<br/>
+                      <b>State</b>: Maharashtra<br/>
+                      <b>Country</b>: India<br/>
+                      <b>Device Type</b>: Computer<br/>
+                      <b>Device Brand</b>: -<br/>
+                      <b>Device Model</b>: -<br/>
+                      <b>Device OS</b>: Windows 10<br/>
+                      <b>Device Resolution</b>: -<br/>
+                      <b>Session Start Time</b>: 01/01/2023 09:00:00 AM<br/>
+                      <b>Session End Time</b>: 01/01/2023 09:30:00 AM<br/>
+                      <b>Session Duration</b>: 30 minutes
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>CIBIL Score</b>: 750<br/>
+                      <b>CRIF Score</b>: 800<br/>
+                      <b>Remarks</b>: -<br/>
+                      <b>Score Card</b>: <a href="#">View Document</a><br/>
+                      <b>Discrepancy</b>: No
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Aadhar Card</b>: <a href="#">View Document</a><br/>
+                      <b>PAN Card</b>: <a href="#">View Document</a><br/>
+                      <b>Salary Slip</b>: <a href="#">View Document</a><br/>
+                      <b>Bank Statement</b>: <a href="#">View Document</a><br/>
+                      <b>Address Proof</b>: <a href="#">View Document</a><br/>
+                      <b>Other Documents</b>: <a href="#">View Document</a>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Fraud Score</b>: Low<br/>
+                      <b>Reason</b>: -<br/>
+                      <b>Rejection Status</b>: No<br/>
+                      <b>Remarks</b>: -<br/>
+                      <b>Check Status</b>: Pass
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Manual Check Rejection</b>: No<br/>
+                      <b>Remarks</b>: -<br/>
+                      <b>Reason</b>: -<br/>
+                      <b>Check Status</b>: Pass
+                    </div>
+                  </td>
+                  <td>
+                    <div class="hideextra">
+                      <b>Rejection Reason</b>: -<br/>
+                      <b>Remarks</b>: -<br/>
+                      <b>Check Status</b>: Pass
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="table-responsive">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Loan Application Number</th>
+                      <th>Customer ID</th>
+                      <th>Loan Amount</th>
+                      <th>Tenure</th>
+                      <th>Interest Rate</th>
+                      <th>EMI</th>
+                      <th>Status</th>
+                      <th>Remarks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>123456789</td>
+                      <td>9876543210</td>
+                      <td>100000</td>
+                      <td>12 months</td>
+                      <td>10%</td>
+                      <td>8888</td>
+                      <td>Approved</td>
+                      <td>-</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <button nbButton nbStepperNext>next</button>
-            </form>
-          </nb-step>
-          <nb-step [stepControl]="secondForm" label="Second step">
-            <form [formGroup]="secondForm" (ngSubmit)="onSecondSubmit()" class="step-container">
-              <p class="lorem">
-                Pellentesque we gonna chung tortor.
-                Sizzle pizzle. Fizzle izzle dolor dapibus fo shizzle mah nizzle fo rizzle, mah home g-dizzle tempus tempor.
-                Maurizzle cool nibh owned turpizzle. My shizz fo shizzle tortor.
-              </p>
-              <div class="input-group">
-                <input type="text" placeholder="Enter favorite movie" class="form-control" formControlName="secondCtrl"
-                       [ngClass]="{'form-control-danger': secondForm.invalid && (secondForm.dirty || secondForm.touched)}">
-              </div>
-              <button nbButton nbStepperPrevious>prev</button>
-              <button nbButton nbStepperNext>next</button>
-            </form>
-          </nb-step>
-          <nb-step [stepControl]="thirdForm" label="Third step">
-            <form [formGroup]="thirdForm" (ngSubmit)="onThirdSubmit()" class="step-container">
-              <p class="lorem">
-                Things boom shackalack rhoncus yo. In fo shizzle my nizzle gangsta platea dictumst. Check it out pot.
-              </p>
-              <div class="input-group">
-                <input type="text" placeholder="Enter something" class="form-control" formControlName="thirdCtrl"
-                       [ngClass]="{'form-control-danger': thirdForm.invalid && (thirdForm.dirty || thirdForm.touched)}">
-              </div>
-              <button nbButton nbStepperPrevious>prev</button>
-              <button nbButton nbStepperNext>Confirm</button>
-            </form>
-          </nb-step>
-          <nb-step [stepControl]="thirdForm" [hidden]="true" label="Third step">
-            <div class="step-container">
-              <h3>Wizard completed!</h3>
-              <button nbButton (click)="stepper.reset()">Try again</button>
             </div>
-          </nb-step>
-        </nb-stepper>
-      </nb-card-body>
-    </nb-card>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="col-md-12 col-lg-6 col-xxxl-6">
-    <nb-card size="medium">
-      <nb-card-body>
-        <nb-stepper orientation="vertical">
-          <nb-step label="First step">
-            <h3>Step content #1</h3>
-            <p class="lorem">
-              Proin varius accumsan semper. Praesent consequat tincidunt sagittis. Curabitur egestas sem a ipsum bibendum,
-              sit amet fringilla orci efficitur. Nam bibendum lectus ut viverra tristique. Fusce eu pulvinar magna, quis
-              viverra ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus turpis, commodo vel
-              placerat quis, lobortis in ligula.
-            </p>
-            <button nbButton disabled nbStepperNext>prev</button>
-            <button nbButton nbStepperNext>next</button>
-          </nb-step>
-          <nb-step label="Second step">
-            <h3>Step content #2</h3>
-            <p class="lorem">
-              Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
-              sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
-              eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton nbStepperNext>next</button>
-          </nb-step>
-          <nb-step label="Third step">
-            <h3>Step content #3</h3>
-            <p class="lorem">
-              Proin varius accumsan semper. Praesent consequat tincidunt sagittis. Curabitur egestas sem a ipsum bibendum,
-              sit amet fringilla orci efficitur. Nam bibendum lectus ut viverra tristique. Fusce eu pulvinar magna, quis
-              viverra ex. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent metus turpis, commodo vel
-              placerat quis, lobortis in ligula.
-            </p>
-            <p class="lorem">
-              Curabitur luctus mattis risus nec condimentum. Donec at dui turpis. Sed vehicula fringilla rutrum. Nullam
-              sed ornare magna. Mauris vitae laoreet diam. Mauris fermentum ligula at lacinia semper. Nulla placerat dui
-              eu sapien pellentesque, eu placerat leo luctus. Cras pharetra blandit fermentum.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton nbStepperNext>next</button>
-          </nb-step>
-          <nb-step label="Fourth step">
-            <h3>Step content #4</h3>
-            <p class="lorem">
-              Proin varius accumsan semper. Praesent consequat tincidunt sagittis. Curabitur egestas sem a ipsum bibendum,
-              sit amet fringilla orci efficitur. Nam bibendum lectus ut viverra tristique. Fusce eu pulvinar magna, quis
-              viverra ex.
-            </p>
-            <button nbButton nbStepperPrevious>prev</button>
-            <button nbButton disabled nbStepperNext>next</button>
-          </nb-step>
-        </nb-stepper>
-      </nb-card-body>
-    </nb-card>
-  </div>
-</div>
+  </section>
+<!-- </div> -->

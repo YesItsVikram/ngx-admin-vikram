@@ -41,10 +41,10 @@ const routes: Routes = [{
           path: 'tab1',
           component: Tab1Component,
         },
-        {
-          path: 'tab2',
-          component: Tab2Component,
-        },
+        // {
+        //   path: 'tab2',
+        //   component: Tab2Component,
+        // },
       ],
     },
   ],

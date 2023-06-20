@@ -1,0 +1,42 @@
+<!-- <nb-tabset fullWidth>
+  <nb-tab tabTitle="Core UW">
+    <router-outlet></router-outlet>
+  </nb-tab>
+  <nb-tab tabTitle="Triggers">
+  </nb-tab>
+  <nb-tab tabTitle="Lender Allocation"></nb-tab>
+  <nb-tab tabTitle="Utilities"></nb-tab>
+</nb-tabset> -->
+
+<h6>Credit</h6>
+<div *ngIf="showSearch" class="card card-success">
+  <div class="card-header">
+  <h3 class="card-title">Search Parameters</h3>
+  </div>
+  <div class="card-body">
+    <table class="table"> 
+      <tbody><tr><td><input class="form-control" type="Loan Id" placeholder="Loan/Customer Id"></td>
+        <td><button type="button" class="btn btn-block bg-gradient-success">L</button></td>
+        
+        <td><button type="button" class="btn btn-block bg-gradient-success">C</button></td>
+        <td><button type="button" class="btn btn-block bg-gradient-success">Load100</button></td>
+
+        <td><input class="form-control" type="Mobile No" placeholder="Mobile no"></td>
+        <td><input class="form-control" type="Loan Id" placeholder="Full name"></td>
+       
+
+        <td><input class="form-control" type="Email Id" placeholder="Email id"></td>
+        <td><input class="form-control" type="Loan Id" placeholder="Pan"></td>
+        <td><button type="button" class="btn btn-block bg-gradient-success">Search</button></td>
+
+
+      </tr>
+    </tbody></table>
+
+  
+  </div>
+  
+  </div>
+
+
+<nb-route-tabset [tabs]="tabs"></nb-route-tabset>

@@ -1,42 +1,154 @@
-<div class="row">
-  <div class="col-xxxl-3 col-md-6" *ngFor="let statusCard of statusCards">
-    <ngx-status-card [title]="statusCard.title" [type]="statusCard.type">
-      <i [ngClass]="statusCard.iconClass"></i>
-    </ngx-status-card>
+<div class="content-wrapper" style="min-height: 682px;">
+  <!-- Content Header (Page header) -->
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Dashboard</h1>
+        </div><!-- /.col -->         
+      </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
   </div>
-</div>
+  <!-- /.content-header -->
 
-<div class="row">
-  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-    <ngx-temperature></ngx-temperature>
-  </div>
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-info">
+            <div class="inner">
+              <h3>1200</h3>
 
-  <div class="col-xxxl-9 col-xxl-8 col-lg-7 col-md-6">
-    <ngx-electricity></ngx-electricity>
-  </div>
-</div>
+              <p>TOTAL APPLICATIONS TODAY</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-bag"></i>
+            </div>            
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-success">
+            <div class="inner">
+              <h3>5<sup style="font-size: 20px">%</sup></h3>
 
-<div class="row">
-  <div class="col-xxxl-9 col-xl-12">
-    <ngx-rooms></ngx-rooms>
-  </div>
+              <p>PSR</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-stats-bars"></i>
+            </div>             
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-warning">
+            <div class="inner">
+              <h3>44 Lacs</h3>
 
-  <div class="col-xxxl-3 col-xxl-4 col-lg-7 col-md-6">
-    <ngx-contacts></ngx-contacts>
-  </div>
+              <p>Approvals Today</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-person-add"></i>
+            </div>
+          
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-6">
+          <!-- small box -->
+          <div class="small-box bg-danger">
+            <div class="inner">
+              <h3>22 Lacs</h3>
 
-  <div class="col-xxxl-3 col-xxl-4 col-lg-5 col-md-6">
-    <ngx-solar [chartValue]="solarValue"></ngx-solar>
-
-    <ngx-kitten></ngx-kitten>
-  </div>
-
-  <div class="col-xxxl-3 col-xxl-4 col-md-5">
-    <ngx-traffic></ngx-traffic>
-    <ngx-weather></ngx-weather>
-  </div>
-
-  <div class="col-xxxl-6 col-xxl-12 col-md-7">
-    <ngx-security-cameras></ngx-security-cameras>
-  </div>
+              <p>RFD</p>
+            </div>
+            <div class="icon">
+              <i class="ion ion-pie-graph"></i>
+            </div>
+          </div>
+        </div>
+        <!-- ./col -->
+      </div>
+      <!-- /.row -->
+      <!-- Main row -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">New Journey Stats 5-11 June</h3>
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+          <table class="table table-sm">
+            <thead>
+              <tr>
+                <th>Last Week</th>
+                <th>Logins</th>
+                <th>Completion %</th>
+                <th>Approval %</th>
+                <th>Manual Checks %</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>New Journey - Android</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>New Journey - Web</td>
+                <td>2000</td>
+                <td>50.2%</td>
+                <td>0.1%</td>
+                <td>7%</td>
+              </tr>
+              <tr>
+                <td>BFDL</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>New Journey - Affiliates</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>Old Journey - Affiliates</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>New Journey - Associates</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>Old Journey - Associates</td>
+                <td>3772</td>
+                <td>83.2%</td>
+                <td>0.08%</td>
+                <td>6%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
+      </div>
+      <!-- /.row (main row) -->
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
 </div>

@@ -1,0 +1,132 @@
+@import '../../../@theme/styles/themes';
+
+// @include nb-install-component() {
+//   .accordion-container:first-child {
+//     margin-bottom: nb-theme(card-margin-bottom);
+//   }
+// }
+
+.container {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  width: 100%;
+  overflow: scroll;
+}
+
+h6 {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+
+table {
+  // width: 100%;
+  // border-collapse: collapse;
+}
+
+
+tr {
+  border: none !important;
+  overflow: hidden;
+  height: 14px;
+  white-space: nowrap;
+}
+
+td {
+
+  border-right: 1px solid #ddd;
+}
+
+tr:last-child {
+  border-bottom:  1px solid  #ddd !important;
+}
+
+.outer {
+  padding: 1px 10px 1px 20px;
+}
+
+th {
+  border: 1px solid #ddd;
+  // padding: 8px;
+  min-width: 400px;
+  background-color: #fff;
+  text-align: center;
+  padding: 40px 10px 40px 10px
+}
+
+tbody tr:nth-child(even) {
+  // background-color: #f2f2f2;
+}
+
+tbody {
+  background-color: rgba(106, 106, 106, 0.713);
+}
+
+
+.btn {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Source Sans Pro",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  word-wrap: break-word;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: inherit;
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  display: block;
+  // width: 100%;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+  flex: 1;
+}
+.btn.success {
+
+  background: #28a745 linear-gradient(180deg,#48b461,#28a745) repeat-x!important;
+}
+
+.btn.danger {
+
+  background: #b92731!important;
+}

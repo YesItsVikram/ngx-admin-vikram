@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'ngx-tab1',
@@ -12,7 +13,9 @@ import { Component } from '@angular/core';
     </p>
   `,
 })
-export class Tab1Component { }
+export class Tab1Component {
+
+ }
 
 @Component({
   selector: 'ngx-tab2',
@@ -20,7 +23,11 @@ export class Tab1Component { }
     <p>Tab 2 works!</p>
   `,
 })
-export class Tab2Component { }
+export class Tab2Component {
+
+
+
+ }
 
 @Component({
   selector: 'ngx-tabs',
@@ -29,15 +36,37 @@ export class Tab2Component { }
 })
 export class TabsComponent {
 
-  tabs: any[] = [
-    {
-      title: 'Route tab #1',
-      route: '/pages/layout/tabs/tab1',
-    },
-    {
-      title: 'Route tab #2',
-      route: '/pages/layout/tabs/tab2',
-    },
-  ];
+  // tabs: any[] = [
+  //   {
+  //     title: 'Route tab #1',
+  //     route: '/pages/layout/tabs/tab1',
+  //   },
+  //   // {
+  //   //   title: 'Route tab #2',
+  //   //   route: '/pages/layout/tabs/tab2',
+  //   // },
+  // ];
+
+  tabs: string[] = []
+
+  constructor(
+    private route: ActivatedRoute
+  ) {
+
+    
+    
+  }
+
+  ngOnInit() {
+    // this.tabs = this.route.snapshot.queryParamMap.get('tabs');
+
+    this.route.queryParams.subscribe((params: Params) => {
+      this.tabs = params['tabs']?.split(',');
+      // console.log(token);
+
+      console.log('tabs: ', this.tabs)
+    });
+    console.log(this.tabs)
+  }
 
 }
