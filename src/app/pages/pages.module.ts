@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { NbMenuModule, NbTabsetModule } from "@nebular/theme";
+import { NbCardModule, NbMenuModule, NbTabsetModule } from "@nebular/theme";
 
 import { ThemeModule } from "../@theme/theme.module";
 import { PagesComponent } from "./pages.component";
@@ -23,6 +23,7 @@ import { CompletedComponent } from "./credit/completed/completed.component";
     MiscellaneousModule,
     NbTabsetModule,
     // CreditModule,
+    NbCardModule,
   ],
   declarations: [
     PagesComponent,

@@ -1,6 +1,6 @@
 import { Component, Input } from "@angular/core";
 import * as jsonData from "./upscoring.json";
-import * as jsonData22 from "./upscoring2.json";
+import * as jsonData22 from "./upscoring3.json";
 import { ActivatedRoute, Params } from "@angular/router";
 
 @Component({
@@ -11,6 +11,90 @@ import { ActivatedRoute, Params } from "@angular/router";
       <nb-tab tabTitle="Core Underwriting (Upscoring)"> -->
     <div class="container">
       <h6>{{ heading }}</h6>
+
+      <div *ngIf="true" class="card card-success">
+        <div class="card-header">
+          <h3 class="card-title">Search Parameters</h3>
+        </div>
+        <div class="card-body">
+          <table class="table">
+            <tbody style="background-color: none !important">
+              <tr>
+                <td>
+                  <input
+                    class="form-control"
+                    type="Loan Id"
+                    placeholder="Loan/Customer Id"
+                  />
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="nbtn btn-block bg-gradient-success"
+                  >
+                    L
+                  </button>
+                </td>
+
+                <td>
+                  <button
+                    type="button"
+                    class="nbtn btn-block bg-gradient-success"
+                  >
+                    C
+                  </button>
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="nbtn btn-block bg-gradient-success"
+                  >
+                    Load100
+                  </button>
+                </td>
+
+                <td>
+                  <input
+                    class="form-control"
+                    type="Mobile No"
+                    placeholder="Mobile no"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control"
+                    type="Loan Id"
+                    placeholder="Full name"
+                  />
+                </td>
+
+                <td>
+                  <input
+                    class="form-control"
+                    type="Email Id"
+                    placeholder="Email id"
+                  />
+                </td>
+                <td>
+                  <input
+                    class="form-control"
+                    type="Loan Id"
+                    placeholder="Pan"
+                  />
+                </td>
+                <td>
+                  <button
+                    type="button"
+                    class="nbtn btn-block bg-gradient-success"
+                  >
+                    Search
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       <table>
         <thead>
@@ -40,7 +124,7 @@ import { ActivatedRoute, Params } from "@angular/router";
             </th>
           </tr>
         </thead>
-        <tbody style="background-color: rgba(0,0,0,.05)">
+        <tbody style="background-color: rgba(0,0,0,.05)" class="tbody">
           <tr *ngFor="let row of jsonArr22; let j = index">
             <td *ngFor="let heading of headings22; let i = index" colspan="2">
               <div class="outer">
@@ -48,12 +132,18 @@ import { ActivatedRoute, Params } from "@angular/router";
                   [class.lk]="heading[1] === 'LK Engine Data' && !showLKData"
                   class="inner"
                 >
-                  <b>{{ row[heading[0]] ? row[heading[0]] + " : " : "" }}</b>
-                  &nbsp;&nbsp;{{
-                    row["col" + (+heading[0].substring(3) + 1)] || ""
-                  }}
+                  <span class="inner-span">
+                    <b>{{ row[heading[0]] ? row[heading[0]] + " : " : "" }}</b>
+                    &nbsp;&nbsp;{{
+                      row["col" + (+heading[0].substring(3) + 1)] || ""
+                    }}
+                  </span>
+                  <div *ngIf="j === 0 && i === 0">
+                    <span class="pill">New Journey</span>
+                  </div>
+
                   <div
-                    *ngIf="j === 6 && i === 0"
+                    *ngIf="j === 7 && i === 0"
                     style="display: flex; width: 100%; justify-content: center"
                   >
                     <button class="btn success">Approve</button>
